@@ -115,6 +115,8 @@ def plot(d):
     E /= utils.norm(E)
     perts = numpy.logspace(-12, 0, 300)
 
+    pyplot.figure()
+
     # compute exact eigenvalue error
     diff_perts, diff_vals = gather(spectral_diff, A, V, E, perts, evals, sel)
     pyplot.loglog(diff_perts, diff_vals,
@@ -135,16 +137,14 @@ def plot(d):
     pyplot.ylabel(r'Eigenvalue error')
     pyplot.legend(loc='upper left')
     pyplot.ylim(ymin=1e-15)
-    pyplot.show()
 
 
 def run_figure_3_6():
     '''Run figure 3.6'''
     pyplot.ion()
     plot(3)
-    pyplot.figure()
-    pyplot.ioff()
     plot(2)
+    pyplot.show(block=True)
 
 if __name__ == '__main__':
     run_figure_3_6()
