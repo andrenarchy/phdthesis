@@ -35,25 +35,22 @@ def run_figure_3_2():
     E /= utils.norm(E)
     pert = 1e-5
 
-    # use the default color cycle
-    colors = pyplot.rcParams['axes.color_cycle']
-
     # solve vanilla
     minres = linsys.Minres(linear_system, tol=tol, store_arnoldi=True)
-    pyplot.semilogy(minres.resnorms, color=colors[0], label=r'$Ax=b$')
+    pyplot.semilogy(minres.resnorms, color=defaults.colors[0], label=r'$Ax=b$')
 
     # plot bound for vanilla
     bound = utils.BoundMinres(problem['evals'])
     pyplot.semilogy([bound.eval_step(step)
                      for step in range(len(minres.resnorms))],
-                    color=colors[0], linestyle='dashed',
+                    color=defaults.colors[0], linestyle='dashed',
                     label=r'bound for $Ax=b$'
                     )
 
     # solve deflated exact invariant
     V = numpy.eye(N, N)[:, :3]
     minres_V = deflation.DeflatedMinres(linear_system, U=V, tol=tol)
-    pyplot.semilogy(minres_V.resnorms, color=colors[1],
+    pyplot.semilogy(minres_V.resnorms, color=defaults.colors[1],
                     label=r'$P_{V^\perp}Ax=P_{V^\perp}b$'
                     )
 
@@ -61,13 +58,13 @@ def run_figure_3_2():
     bound = utils.BoundMinres(problem['evals'][3:])
     pyplot.semilogy([bound.eval_step(step)
                      for step in range(len(minres_V.resnorms))],
-                    color=colors[1], linestyle='dashed',
+                    color=defaults.colors[1], linestyle='dashed',
                     label=r'bound for $P_{V^\perp}Ax=P_{V^\perp}b$'
                     )
 
     # solve deflated approximate invariant
     minres_U = deflation.DeflatedMinres(linear_system, U=V+pert*E, tol=tol)
-    pyplot.semilogy(minres_U.resnorms, '-.', color=colors[2],
+    pyplot.semilogy(minres_U.resnorms, '-.', color=defaults.colors[2],
                     label=r'$P_{U^\perp,AU}Ax=P_{U^\perp,AU}b$'
                     )
 
