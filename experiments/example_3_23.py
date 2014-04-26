@@ -1,6 +1,7 @@
 import numpy
 from matplotlib import pyplot
 from krypy import linsys, utils, deflation
+import defaults
 
 
 def get_problem():
