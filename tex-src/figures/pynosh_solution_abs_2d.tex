@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+\begin{axis}
+[
+axis equal,
+enlargelimits=false,
+scale only axis,
+hide axis=true,
+width=\figurewidth,
+height=\figureheight,
+%colorbar=true,
+%point meta min=0,
+%point meta max=1,
+%colormap/blackwhite,
+%colorbar style={ytick={0,0.5,1},yticklabels={$0$,$\frac{1}{2}$,$1$}}
+]
+\addplot graphics[xmin=-10,xmax=10,ymin=-10,ymax=10]{figures/pynosh_solution_abs_2d};
+\end{axis}
+\end{tikzpicture}

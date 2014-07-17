@@ -1,0 +1,76 @@
+% This file was created by matplotlib v0.1.0.
+% Copyright (c) 2010--2014, Nico Schlömer <nico.schloemer@gmail.com>
+% All rights reserved.
+% 
+\begin{tikzpicture}
+
+\definecolor{color1}{rgb}{0.203921568627451,0.541176470588235,0.741176470588235}
+\definecolor{color0}{rgb}{0.886274509803922,0.290196078431373,0.2}
+\definecolor{color2}{rgb}{0.556862745098039,0.729411764705882,0.258823529411765}
+
+\begin{semilogyaxis}[
+xlabel={MINRES iteration $n$},
+ylabel={$\frac{\nrm{\vr_n}}{\nrm{\vb}}$},
+xmin=0, xmax=14,
+ymin=1e-06, ymax=1,
+axis on top,
+width=\figurewidth,
+height=\figureheight,
+legend style={cells={anchor=east},legend pos=outer north east,draw=none},
+legend cell align=left,
+legend entries={{original},{exact deflation},{automatic recycling}}
+]
+\addplot [very thick, color0]
+coordinates {
+(0,1)
+(1,0.287613704369319)
+(2,0.225834263045604)
+(3,0.22367530821001)
+(4,0.223614654620888)
+(5,0.223614137344513)
+(6,0.223602584263414)
+(7,0.223099604385256)
+(8,0.205149904207259)
+(9,0.0744561354604778)
+(10,0.0117138866876465)
+(11,0.0016803970107318)
+(12,0.000230573168440109)
+(13,3.00433133539551e-05)
+(14,3.67693690600723e-06)
+
+};
+\addplot [very thick, color1, dotted]
+coordinates {
+(0,0.974679434480896)
+(1,0.180889497575041)
+(2,0.0316192619918345)
+(3,0.00534874619460102)
+(4,0.000888306757172417)
+(5,0.000145029583757545)
+(6,2.32316244219815e-05)
+(7,3.63948431988161e-06)
+
+};
+\addplot [very thick, color2, dashed]
+coordinates {
+(0,0.974679434508672)
+(1,0.18088949757829)
+(2,0.0316192619924271)
+(3,0.00534874619473609)
+(4,0.000888306757298634)
+(5,0.000145029584401039)
+(6,2.32316284179808e-05)
+(7,3.63948438292576e-06)
+
+};
+\path [draw=black, fill opacity=0] (axis cs:13,1)--(axis cs:13,1);
+
+\path [draw=black, fill opacity=0] (axis cs:1,13)--(axis cs:1,13);
+
+\path [draw=black, fill opacity=0] (axis cs:13,0)--(axis cs:13,0);
+
+\path [draw=black, fill opacity=0] (axis cs:0,13)--(axis cs:0,13);
+
+\end{semilogyaxis}
+
+\end{tikzpicture}

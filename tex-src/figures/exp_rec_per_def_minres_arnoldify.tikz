@@ -1,0 +1,59 @@
+% This file was created by matplotlib v0.1.0.
+% Copyright (c) 2010--2014, Nico Schlömer <nico.schloemer@gmail.com>
+% All rights reserved.
+% 
+
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.886274509803922,0.290196078431373,0.2}
+
+\begin{semilogyaxis}[
+xlabel={Iteration $i$},
+ylabel={$\nrm{\oiF_i}$},
+xmin=0, xmax=25,
+ymin=1e-16, ymax=1,
+axis on top,
+width=\figurewidth,
+height=\figureheight,
+legend style={cells={anchor=east},legend pos=outer north east,draw=none},
+legend cell align=left
+]
+\addplot [very thick, color0]
+coordinates {
+(1,1.98492383446018e-16)
+(2,9.64613453657241e-16)
+(3,4.87768367029802e-15)
+(4,2.5234104335669e-14)
+(5,1.31119272362659e-13)
+(6,6.80744528478634e-13)
+(7,3.52392128930043e-12)
+(8,1.81665192030703e-11)
+(9,9.31555470471334e-11)
+(10,4.74809899371384e-10)
+(11,2.40271116823186e-09)
+(12,1.20548195786609e-08)
+(13,5.98985743462183e-08)
+(14,2.94158899238103e-07)
+(15,1.42419278604407e-06)
+(16,6.77781469379153e-06)
+(17,3.15726672358133e-05)
+(18,0.000143112536493235)
+(19,0.000625854290774298)
+(20,0.00260613885276328)
+(21,0.0101142821761878)
+(22,0.0352675004766379)
+(23,0.104346053198815)
+(24,0.24541495269234)
+
+};
+\path [draw=black, fill opacity=0] (axis cs:13,1)--(axis cs:13,1);
+
+\path [draw=black, fill opacity=0] (axis cs:1,13)--(axis cs:1,13);
+
+\path [draw=black, fill opacity=0] (axis cs:13,0)--(axis cs:13,0);
+
+\path [draw=black, fill opacity=0] (axis cs:0,13)--(axis cs:0,13);
+
+\end{semilogyaxis}
+
+\end{tikzpicture}

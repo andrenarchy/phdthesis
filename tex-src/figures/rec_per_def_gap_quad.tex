@@ -1,0 +1,40 @@
+\begin{tikzpicture}[scale=6]
+  \def\boxheight{0.03}
+  \def\tickheight{0.04}
+  \newcommand\drawtop[3]{
+    \draw[draw=#3] (#1,0) -- (#1,\tickheight);
+    \draw[text=#3] (#1,\tickheight) node[anchor=south] {#2};
+  }
+  \newcommand\drawbot[3]{
+    \draw[draw=#3] (#1,0) -- (#1,-\tickheight);
+    \draw[text=#3] (#1,-\tickheight) node[anchor=north] {#2};
+  }
+
+  % top
+  \drawtop{-0.9}{$\mu_1$}{black}
+  \drawtop{-0.4}{$\widehat{\lambda}_{k_1}$}{gray}
+  \drawtop{0}{$\mu_2$}{black}
+  \draw[pattern=crosshatch dots,
+        pattern color=gray,
+        draw=gray
+      ] (0.52,0) rectangle (0.87,\boxheight);
+  \drawtop{0.52}{$\widehat{\lambda}_{k_2}$}{gray}
+  \drawtop{0.87}{$\widehat{\lambda}_{k_{N-2}}$}{gray}
+
+  % bottom
+  \drawbot{-0.85}{$\lambda_1$}{gray}
+  \drawbot{-0.35}{$\lambda_2=\lambda_{k_1}$}{black}
+  \drawbot{0.05}{$\lambda_3$}{gray}
+  \drawbot{0.55}{$\lambda_4=\lambda_{k_2}$}{black}
+  \draw[pattern=crosshatch dots,
+        pattern color=darkgray,
+        draw=darkgray
+      ] (0.55,0) rectangle (0.9,-\boxheight);
+  \drawbot{0.9}{$\lambda_N=\lambda_{k_{N-2}}$}{black}
+
+  \draw[decorate,decoration={brace,raise=1.9em}] (-0.35,0) -- node[above=2em]{$\delta$} (0,0);
+
+  % draw real numbers line
+  \draw (-1,0) -- (1,0);
+  \draw (1,0) node[anchor=west] {$\R$};
+\end{tikzpicture}

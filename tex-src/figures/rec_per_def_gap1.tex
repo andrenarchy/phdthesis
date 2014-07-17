@@ -1,0 +1,43 @@
+\begin{tikzpicture}[scale=6]
+  \def\boxheight{0.03}
+  \def\tickheight{0.04}
+
+  % \mu
+  \draw[pattern=crosshatch dots,
+        pattern color=blue!50!white,
+        draw=blue!50!white
+      ] (-0.2,0) rectangle (0.2,\boxheight);
+  \draw (-0.2,0) -- (-0.2,\tickheight);
+  \draw (-0.2,\tickheight) node[anchor=south] {$\mu_1$};
+  \draw (0,\tickheight) node[anchor=south] {$\ldots$};
+  \draw (0.2,0) -- (0.2,\tickheight);
+  \draw (0.2,\tickheight) node[anchor=south] {$\mu_m$};
+
+  % \lambda
+  \draw[pattern=crosshatch dots,
+        pattern color=green,
+        draw=green
+      ] (-0.9,0) rectangle (-0.6,-\boxheight);
+  \draw (-0.9,0) -- (-0.9,-\tickheight);
+  \draw (-0.9,-\tickheight) node[anchor=north] {$\lambda_{k_{m+1}}$};
+  \draw (-0.75,-\tickheight) node[anchor=north] {$\ldots$};
+  \draw (-0.6,0) -- (-0.6,-\tickheight);
+  \draw (-0.6,-\tickheight) node[anchor=north] {$\lambda_{k_s}$};
+
+  % \lambda
+  \draw[pattern=crosshatch dots,
+        pattern color=green,
+        draw=green
+      ] (0.7,0) rectangle (0.4,-\boxheight);
+  \draw (0.4,0) -- (0.4,-\tickheight);
+  \draw (0.4,-\tickheight) node[anchor=north] {$\lambda_{k_{s+1}}$};
+  \draw (0.55,-\tickheight) node[anchor=north] {$\ldots$};
+  \draw (0.7,0) -- (0.7,-\tickheight);
+  \draw (0.7,-\tickheight) node[anchor=north] {$\lambda_{k_N}$};
+
+  \draw[decorate,decoration={brace,raise=1.9em}] (0.2,0) -- node[above=2em]{$\underline{\delta}$} (0.4,0);
+
+  % draw real numbers line
+  \draw (-1,0) -- (1,0);
+  \draw (1,0) node[anchor=west] {$\R$};
+\end{tikzpicture}

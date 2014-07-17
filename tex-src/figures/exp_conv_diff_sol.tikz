@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+\begin{axis}
+[
+%axis equal,
+enlargelimits=false,
+scale only axis,
+hide axis=true,
+width=\figurewidth,
+colorbar=true,
+colormap name=hot,
+colorbar shift/.style={xshift=0.05*\pgfkeysvalueof{/pgfplots/parent axis width}},
+colorbar style={
+    anchor=west,
+    at={(parent axis.right of east)},
+    ytick={0,1},
+    height=0.75*\pgfkeysvalueof{/pgfplots/parent axis height}
+}
+]
+\addplot graphics[xmin=-10,xmax=10,ymin=-10,ymax=10]{figures/exp_conv_diff_sol.png};
+\end{axis}%
+\end{tikzpicture}

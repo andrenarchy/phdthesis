@@ -1,0 +1,104 @@
+% This file was created by matplotlib v0.1.0.
+% Copyright (c) 2010--2014, Nico Schlömer <nico.schloemer@gmail.com>
+% All rights reserved.
+% 
+\begin{tikzpicture}
+
+\definecolor{color1}{rgb}{0.556862745098039,0.729411764705882,0.258823529411765}
+\definecolor{color0}{rgb}{0.203921568627451,0.541176470588235,0.741176470588235}
+
+\begin{axis}[
+xlabel={Newton step},
+ylabel={Deflation vectors},
+xmin=0, xmax=21,
+ymin=0, ymax=20,
+axis on top,
+width=\figurewidth,
+height=\figureheight
+]
+\addplot [very thick, color0, dashed]
+coordinates {
+(0.999999999999999,12)
+(2,12)
+(3,12)
+(4,12)
+(5,12)
+(6,12)
+(7,12)
+(8,12)
+(9,12)
+(10,12)
+(11,12)
+(12,12)
+(13,12)
+(14,12)
+(15,12)
+(16,12)
+(17,12)
+(18,12)
+(19,12)
+(20,12)
+(21,12)
+
+};
+\addplot [very thick, color1, dash pattern=on 1pt off 3pt on 3pt off 3pt]
+coordinates {
+(0.999999999999999,1)
+(2,20)
+(3,17)
+(4,20)
+(5,20)
+(6,11)
+(7,18)
+(8,5)
+(9,7)
+(10,13)
+(11,10)
+(12,11)
+(13,9)
+(14,20)
+(15,10)
+(16,7)
+(17,20)
+(18,20)
+(19,12)
+(20,20)
+(21,20)
+
+};
+\addplot [very thick, white!46.666666666666664!black, dotted]
+coordinates {
+(0.999999999999999,0)
+(2,13)
+(3,16)
+(4,19)
+(5,6)
+(6,13)
+(7,11)
+(8,5)
+(9,2)
+(10,9)
+(11,8)
+(12,1)
+(13,9)
+(14,3)
+(15,16)
+(16,6)
+(17,16)
+(18,8)
+(19,18)
+(20,9)
+(21,19)
+
+};
+\path [draw=black, fill opacity=0] (axis cs:13,20)--(axis cs:13,20);
+
+\path [draw=black, fill opacity=0] (axis cs:21,13)--(axis cs:21,13);
+
+\path [draw=black, fill opacity=0] (axis cs:13,0)--(axis cs:13,0);
+
+\path [draw=black, fill opacity=0] (axis cs:-4.44089209850063e-16,13)--(axis cs:-4.44089209850063e-16,13);
+
+\end{axis}
+
+\end{tikzpicture}

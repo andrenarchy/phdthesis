@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+\begin{axis}
+[
+%at={(step22abs.below south east)},
+%yshift=-1cm,
+%anchor=north east,
+axis equal,
+enlargelimits=false,
+scale only axis,
+hide axis=true,
+width=\figurewidth,
+height=\figureheight,
+colorbar=true,
+point meta min=-3.141592653589793,
+point meta max=3.141592653589793,
+colormap={mymap}{[1pt] rgb(0pt)=(1,0,0); rgb(10pt)=(1,0.9375,0); rgb(11pt)=(0.96875,1,0); rgb(21pt)=(0.03125,1,0); rgb(22pt)=(0,1,0.0625); rgb(32pt)=(0,1,1); rgb(42pt)=(0,0.0625,1); rgb(43pt)=(0.03125,0,1); rgb(53pt)=(0.96875,0,1); rgb(54pt)=(1,0,0.9375); rgb(63pt)=(1,0,0.09375)},
+colorbar style={ytick={-3.141592653589793,0.0,3.141592653589793},yticklabels={$-\pi$,$0$,$\pi$}}
+]
+\addplot graphics[xmin=-10,xmax=10,ymin=-10,ymax=10]{figures/pynosh_solution_arg_3d};
+\end{axis}%
+\end{tikzpicture}

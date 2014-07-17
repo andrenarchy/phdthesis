@@ -1,0 +1,2 @@
+% Embed GIT ID revision and date
+\def\revision{GITID}

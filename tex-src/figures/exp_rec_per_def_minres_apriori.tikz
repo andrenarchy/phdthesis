@@ -1,0 +1,91 @@
+% This file was created by matplotlib v0.1.0.
+% Copyright (c) 2010--2014, Nico Schlömer <nico.schloemer@gmail.com>
+% All rights reserved.
+% 
+\begin{tikzpicture}
+
+\definecolor{color1}{rgb}{0.203921568627451,0.541176470588235,0.741176470588235}
+\definecolor{color0}{rgb}{0.886274509803922,0.290196078431373,0.2}
+
+\begin{semilogyaxis}[
+xlabel={MINRES iteration $n$},
+ylabel={$\frac{\nrm{\vr_n}}{\nrm{\vb}}$},
+xmin=0, xmax=30,
+ymin=1e-06, ymax=3,
+axis on top,
+width=\figurewidth,
+height=\figureheight,
+legend entries={{$\oiA\vx=\vb$},{$\oiP_{\vsW^\perp,\oiA\vsW}\oiA\vx=\oiP_{\vsW^\perp,\oiA\vsW}\vb$},{[align=left]bound~\eqref{eq:back:cg:kappa}\\via theorem~\ref{thm:rec:sel:pri} for\\$\oiP_{\vsW^\perp,\oiA\vsW}\oiA\vx=\oiP_{\vsW^\perp,\oiA\vsW}\vb$}},
+legend cell align=left,
+legend style={legend pos=outer north east,draw=none,row sep=0.5em}
+]
+\addplot [very thick, color0]
+coordinates {
+(0,1)
+(1,0.870433235965661)
+(2,0.865551697578099)
+(3,0.865534487021017)
+(4,0.863305112367193)
+(5,0.807225099507454)
+(6,0.680093556770896)
+(7,0.666888724251397)
+(8,0.666484892221186)
+(9,0.66648489089532)
+(10,0.666071113000763)
+(11,0.652371812046406)
+(12,0.512280761880792)
+(13,0.445344997040381)
+(14,0.442408490287804)
+(15,0.442323326807544)
+(16,0.442323023590164)
+(17,0.44228768442159)
+(18,0.440982131910636)
+(19,0.402334310786005)
+(20,0.155082572443078)
+(21,0.0282115567256666)
+(22,0.00481614503336775)
+(23,0.000818907782601602)
+(24,0.00013892980368452)
+(25,2.35155599994091e-05)
+(26,3.97068390841679e-06)
+(27,6.68766586272218e-07)
+
+};
+\addplot [very thick, color1]
+coordinates {
+(0,0.50186683912738)
+(1,0.0957534699412072)
+(2,0.0173300057679848)
+(3,0.00305578595665837)
+(4,0.000534252474011149)
+(5,9.30427607250798e-05)
+(6,1.61659231048543e-05)
+(7,2.80396101880022e-06)
+(8,4.856406730677e-07)
+
+};
+\addplot [very thick, color1, dashed]
+coordinates {
+(0,2)
+(1,0.34303034175293)
+(2,0.0588349076815661)
+(3,0.0100910792445049)
+(4,0.0017307731809492)
+(5,0.000296853857878906)
+(6,5.09149401594384e-05)
+(7,8.73268466161108e-06)
+(8,1.49778790194651e-06)
+(9,2.56893347939058e-07)
+
+};
+\path [draw=black, fill opacity=0] (axis cs:13,1)--(axis cs:13,1);
+
+\path [draw=black, fill opacity=0] (axis cs:1,13)--(axis cs:1,13);
+
+\path [draw=black, fill opacity=0] (axis cs:13,0)--(axis cs:13,0);
+
+\path [draw=black, fill opacity=0] (axis cs:0,13)--(axis cs:0,13);
+
+\end{semilogyaxis}
+
+\end{tikzpicture}
