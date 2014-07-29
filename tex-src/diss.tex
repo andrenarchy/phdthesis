@@ -120,16 +120,37 @@
 \counterwithin{algorithm}{chapter}
 \counterwithin{table}{chapter}
 
-\usepackage{hyperref} % load as last package! contains url package
+\usepackage{hyperxmp} % metadata for pdf/a-1b
+\usepackage[pdfa]{hyperref} % load as last package! contains url package
 \hypersetup{
   draft=false,
   pdftitle={\doctitle~--~\docsubtitle},
   pdfauthor={\docauthor},
+  pdfcontactemail={gaul@web-yard.de},
+  pdfcopyright={Copyright (C) 2014, \docauthor.
+    This work is licensed under the Creative Commons Attribution-ShareAlike 4.0
+    International License (CC-BY-SA 4.0).},
+  pdflicenseurl={http://creativecommons.org/licenses/by-sa/4.0/deed.en_US},
+  pdfkeywords={Dissertation, mathematics, numerical analysis, Krylov, recycling,
+    linear system, sequence},
+  pdflang={en},
   colorlinks=true,
   linkcolor=black,
   citecolor=black,
   filecolor=black,
   urlcolor=black
+}
+
+% embed color profile
+% cf. http://ioctl.eu/blog/2009/02/21/pdflatex_colorprofiles/
+\immediate\pdfobj stream attr{/N 4}  file{eci_rgb_profile/eciRGB_v2.icc}
+\pdfcatalog{%
+  /OutputIntents [ <<
+  /Type /OutputIntent
+  /S/GTS_PDFA1
+  /DestOutputProfile \the\pdflastobj\space 0 R
+  /OutputConditionIdentifier (CGATS TR001)
+ >> ]
 }
 
 % uppercase cali: operators on infinite-dimensional spaces
