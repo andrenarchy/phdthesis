@@ -15,6 +15,6 @@ All experiments in the thesis can be reproduced easily with the Python source co
  * matplotlib
 
 **Data files:** the meshes and initial data for the experiments with [PyNosh](https://github.com/nschloe/pynosh) can be found here:
-[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.11074.png)](http://dx.doi.org/10.5281/zenodo.11074).
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.11074.png)](http://dx.doi.org/10.5281/zenodo.11074). The files should be placed in the directory `experiments`.
 
 **License:** the files in the directory `experiments` are licensed under the [MIT license](http://opensource.org/licenses/mit-license.php).
