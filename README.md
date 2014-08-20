@@ -1,11 +1,11 @@
 ### Recycling Krylov subspace methods: analysis and applications (PhD thesis)
 
-This repository contains the PhD thesis *Recycling Krylov subspace methods: analysis and applications* written by André Gaul and provides the source code for all experiments as well as for the thesis itself.
+This repository contains the [PhD thesis *Recycling Krylov subspace methods: analysis and applications*](http://opus4.kobv.de/opus4-tuberlin/frontdoor/index/index/docId/5576) written by André Gaul and provides the source code for all experiments as well as for the thesis itself.
 
 #### PhD thesis (pdf and LaTeX source code)
-The LaTeX source code of the thesis can be found in the directory `tex-src`.
+The thesis is available as a [pdf](http://opus4.kobv.de/opus4-tuberlin/files/5576/gaul_andre.pdf). Its LaTeX source code can be found in the directory `tex-src`.
 
-**License:** the pdf and the LaTeX source code in the directory `tex-src` of the PhD thesis are licensed under the [CC BY-SA 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/deed.en_US).
+**License:** the [pdf](http://opus4.kobv.de/opus4-tuberlin/files/5576/gaul_andre.pdf)  and the LaTeX source code in the directory `tex-src` of the PhD thesis are licensed under the [CC BY-SA 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/deed.en_US).
 
 #### Experiments (Python source code)
 All experiments in the thesis can be reproduced easily with the Python source code in the directory `experiments` of this repository. The experiments require the following Python packages:
